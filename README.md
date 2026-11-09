@@ -265,8 +265,8 @@ When fetching an article via `VisiblyClient.fetch_article()`, the returned dict 
 | `project_id` | int | Owning project ID |
 | `plan_id` | int/null | Content cluster the article belongs to |
 | `url_prefix` | string/null | Path prefix of the cluster, e.g. `/glossary/` |
-| `content_language` | string/null | Language of the cluster, e.g. `de`, `en` |
-| `target_country` | string/null | Target country of the cluster, e.g. `DE` |
+| `content_language` | string/null | Language of the article, falling back to its cluster, e.g. `de`, `en`. `null` only if neither is set |
+| `target_country` | string/null | Target country of the article, falling back to its cluster, e.g. `DE` |
 | `recommended_page_type` | string | Page template hint, e.g. `guide`, `blog` |
 | `revision` | int | Increases on every write in Visibly |
 | `content_format` | string | `html` or `markdown` |

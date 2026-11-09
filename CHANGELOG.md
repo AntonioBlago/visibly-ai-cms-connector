@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — article language in the Pull API (2026-11-09)
+
+- `content_language` and `target_country` now come from the article first and
+  fall back to its cluster. Articles without a cluster (for example drafts handed
+  over via MCP) no longer arrive with `null` when they carry a language.
+  Consumers should still handle `null`.
+
 ## Unreleased — repository naming and documentation (2026-09-27)
 
 - Rename the GitHub project from `ai-content-autopilot` to
